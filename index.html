@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NorthPeak</title>
+	<link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+	<script>
+		const theme = localStorage.getItem('theme') || 'dark_mode';
+		document.documentElement.classList.add(theme === 'light_mode' ? 'light-mode' : 'dark-mode');
+		document.documentElement.style.colorScheme = theme === 'light_mode' ? 'light' : 'dark';
+	</script>
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body class="unselectable">
+	<header id="main-header">
+		<!-- Navbar -->
+		<nav>
+			<a class="brand" href="#home">
+				<img class="brand-logo" src="./assets/logo.png" alt="brand-logo"></img>
+				<span class="brand-name">NorthPeak</span>
+			</a>
+
+			<div class="nav-center">
+				<a class="navlink" href="#home">Home</a>
+				<a class="navlink" href="#services">Services</a>
+				<a class="navlink" href="#testimonials">Testimonials</a>
+				<a class="navlink" href="#pricing">Pricing</a>
+				<a class="navlink" href="#contact">Contact</a>
+			</div>
+
+			<span class="material-symbols-outlined" id="theme-toggle">light_mode</span>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Hero Section -->
+		<section id="home">
+			<div class="hero-glow"></div>
+			<div class="hero-content">
+				<h1 class="hero-heading">Design. Develop. Grow.</h1>
+				<p class="hero-desc">
+					NorthPeak Digital partners with startups and growing businesses to design, 
+					build, and optimize websites that convert visitors into customers. 
+					We combine thoughtful design with high-performance development to help 
+					brands stand out online.
+				</p>
+				<div>
+					<a href="#contact">
+						<button class="btn-primary btn-shadow hero-cta-btn">Build With Us</button>
+					</a>
+					<a href="#services">
+						<button class="btn-outline hero-cta-btn">Explore our Services</button>
+					</a>
+				</div>
+				<div class="hero-statistics">
+					<p>250+ Projects Delivered 98% &nbsp; <b>|</b> &nbsp; Client Satisfaction &nbsp; <b>|</b> &nbsp; 5+ Years of Experience</p>
+					<!-- <p>250+ Projects Delivered 98% </p> <p>Client Satisfaction </p> <p>5+ Years of Experience</p> -->
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services">
+			<header>
+				<h1>Services</h1>
+				<p>
+					End-to-end digital solutions tailored to 
+					help your business grow, engage customers, 
+					and stay ahead of the competition.
+				</p>
+			</header>
+
+			<div class="section-body">
+				<div class="services-container"></div>
+			</div>
+		</section>
+
+		<!-- Testimonials Section -->
+		<section id="testimonials">
+			<header>
+				<h1>What Our Clients Say</h1>
+				<p>
+					Discover how we've helped businesses achieve meaningful 
+					results through thoughtful digital solutions.
+				</p>
+			</header>
+
+			<div class="section-body">
+				<div class="testimonials-container"></div>
+			</div>
+		</section>
+
+		<!-- Pricing Section -->
+		<section id="pricing">
+			<header>
+				<h1>Simple, Transparent Pricing</h1>
+				<p>
+					Flexible plans designed to support businesses at every 
+					stage of growth, from startups to established enterprises.
+				</p>
+			</header>
+
+			<div class="section-body">
+				<div class="prices-container"></div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact">
+			<header>
+				<h1>Contact Us</h1>
+				<p>Have a project in mind or just want to say hello? We'd love to hear from you.</p>
+			</header>
+
+			<div class="section-body">
+				<div class="contact-form-card glass-card card-shadow">
+					<h1>Let's get in touch</h1>
+
+					<form id="contact-form" novalidate>
+						<div class="form-group">
+							<label class="required" for="name">Full Name</label>
+							<input 
+								type="text" 
+								id="name" 
+								name="name"
+								placeholder="Eg. Rohan Sharma" 
+								autocomplete="name"
+								required 
+							>
+							<div class="error-message"></div>
+						</div>
+
+						<div class="form-group">
+							<label for="company">Company</label>
+							<input 
+								type="text" 
+								id="company" 
+								name="company"
+								placeholder="Company name" 
+								autocomplete="organization"
+							>
+							<div class="error-message"></div>
+						</div>
+
+						<div class="form-group">
+							<label class="required" for="email">Email</label>
+							<input 
+								type="email" 
+								id="email"
+								name="email" 
+								placeholder="email@example.com" 
+								autocomplete="email"
+								required 
+							>
+							<div class="error-message"></div>
+						</div>
+
+						<div class="form-group">
+							<label for="phone">Phone</label>
+							<input 
+								type="telephone" 
+								id="phone"
+								name="phone" 
+								placeholder="Enter phone number" 
+								autocomplete="tel"
+							>
+							<div class="error-message"></div>
+						</div>
+						
+						<div class="form-group">
+							<label class="required" for="message">Message</label>
+							<textarea 
+								id="message" 
+								name="message"
+								placeholder="How can we help?" 
+								data-maxlength="1000" 
+								rows="4"
+								required 
+							></textarea>
+							<div class="error-message"></div>
+						</div>
+						
+						<div class="success-message">
+							<span class="material-symbols-outlined">check_circle</span>
+							The contact form is submitted successfully!
+						</div>
+
+						<button 
+							class="submit-btn btn-primary btn-shadow" 
+							type="submit"
+						>
+							Get in Touch
+						</button>
+					</form>
+				</div>
+
+				<aside>
+					<div class="contact-info">
+						<div class="visit-us">
+							<h1>Visit Us</h1>
+							<p>6st, Nolan Road</p>
+							<p>Stanfield South, 2261</p>
+						</div>
+	
+						<div class="talk-to-us">
+							<h1>Talk to Us</h1>
+							<p>+91 92545 86382</p>
+							<p>test@northpeak.com</p>
+						</div>
+					</div>
+
+					<div class="socials">
+						<a href="https://www.instagram.com">
+							<img src="./assets/instagram.svg" alt="instagram">
+						</a>
+
+						<a href="https://www.facebook.com">
+							<img src="./assets/facebook.svg" alt="facebook">
+						</a>
+
+						<a href="https://www.linkedin.com">
+							<img src="./assets/linkedin.svg" alt="linkedin">
+						</a>
+
+						<a href="https://www.youtube.com">
+							<img src="./assets/youtube.svg" alt="youtube">
+						</a>
+					</div>
+				</aside>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="bussiness-details">
+			<div class="brand">
+				<img class="brand-logo" src="./assets/logo.png" alt="brand-logo"></img>
+				<span class="brand-name">NorthPeak Digital</span>
+			</div>
+
+			<p>
+				Build better digital experiences with NorthPeak Digital. 
+				Architectural precision in every pixel and string of code.
+			</p>
+			
+			<div class="credits">
+				<p>© 2026 NorthPeak Digital. All rights reserved.</p>
+				<p>
+					Built for 
+					<a href="https://digitalheroesco.com/" target="_blank">Digital Heroes</a> 
+					Training Task.
+				</p>
+			</div>
+		</div>
+
+		<div class="quick-links">
+			<h1>Quick Links</h1>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#testimonials">Testimonials</a></li>
+				<li><a href="#pricing">Pricing</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+
+		<div class="newsletter">
+			<h1>Newsletter</h1>
+			<p>Stay updated with our latest peak insights.</p>
+			
+			<form class="email-input" id="newsletter-form">
+				<input type="email" placeholder="Email">
+				<button type="submit">
+					<span class="material-symbols-outlined">send</span>
+				</button>
+			</form>
+		</div>
+	</footer>
+
+	<script src="./js/data.js"></script>
+	<script src="./js/animation.js"></script>
+	<script src="./js/form-validation.js"></script>
+	<script src="./js/render.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>
