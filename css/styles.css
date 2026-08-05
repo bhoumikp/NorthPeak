@@ -62,7 +62,7 @@ html {
 /* *** Global Styles *** */
 body {
 	font-family: 'Plus Jakarta Sans', sans-serif;
-	background-color: var(--bg-primary);
+	background-color: var(--bg-secondary);
 	color: var(--text-primary);
 	margin: 0;
 	padding: 0;
@@ -263,9 +263,11 @@ nav .navlink.active {
 
 /* *** Main Content Styles *** */
 main section {
+	position: relative;
 	min-height: 100vh;
 	padding: 6vw 10vw;
 	margin: 0 auto;
+	z-index: 2;
 }
 
 main section:nth-child(odd) {
@@ -570,6 +572,7 @@ main section header p {
 #contact {
 	height: auto;
 	min-height: 100vh;
+	border-radius: 0 0 50px 50px;
 }
 
 #contact .section-body {
@@ -666,7 +669,7 @@ footer {
 	gap: 10%;
 	padding: 2.6042vw 10vw;
 	background-color: var(--bg-secondary);
-	z-index: -10;
+	z-index: 1;
 }
 
 footer .bussiness-details>* {
