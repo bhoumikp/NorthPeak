@@ -667,12 +667,14 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	gap: 10%;
-	padding: 2.6042vw 10vw;
+	padding: 4vw 10vw;
 	background-color: var(--bg-secondary);
 	z-index: 1;
 }
 
-footer .bussiness-details>* {
+footer .bussiness-details>*,
+footer .quick-links h1,
+footer .newsletter h1 {
 	margin-bottom: 2rem;
 }
 
