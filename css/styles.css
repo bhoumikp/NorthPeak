@@ -350,7 +350,6 @@ main section header p {
 	position: absolute;
 	top: 0;
 	left: 0;
-	/* z-index: -10; */
 	inset: 0;
 	background: var(--bg-glow);
 	transition: all 250ms ease-in-out;
@@ -368,12 +367,11 @@ main section header p {
 	border: var(--border-primary);
 	border-radius: 16px;
 	padding: 32px;
-	/* background-color: #101f37; */
 	transition: all 250ms ease-in-out;
 }
 
 #services .service-card:hover {
-	cursor: pointer;
+	cursor: default !important;
 	border-color: var(--accent);
 	transform: scale(1.025);
 }
