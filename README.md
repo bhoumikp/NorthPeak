@@ -88,11 +88,3 @@ cd NorthPeak
 ```
 
 Open `index.html` using Live Server or any local development server.
-
----
-
-## 📄 Attribution
-
-Built for **Digital Heroes Training Task**
-
-https://digitalheroesco.com
